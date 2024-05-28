@@ -1,0 +1,4 @@
+"0","rel_markers <- cells@colData %>% "
+"0","  as_tibble() %>% "
+"0","  dplyr::filter(marker_class == ""type"") %>% "
+"0","  .[[""marker_name""]]"

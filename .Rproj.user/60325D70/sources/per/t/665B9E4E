@@ -1,0 +1,27 @@
+{
+    "id": "665B9E4E",
+    "path": "~/Desktop/projects/tech_projects/active/dimr_spectrum/src/get_data.Rmd",
+    "project_path": "src/get_data.Rmd",
+    "type": "r_markdown",
+    "hash": "2414226752",
+    "contents": "",
+    "dirty": false,
+    "created": 1716890464316.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "45,42",
+        "scrollLine": "38",
+        "last_setup_crc32": "23bc53b7bb338d19"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1716890474,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1716890479928,
+    "read_only": false,
+    "read_only_alternatives": []
+}

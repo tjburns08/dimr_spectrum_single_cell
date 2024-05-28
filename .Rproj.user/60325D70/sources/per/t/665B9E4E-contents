@@ -1,0 +1,49 @@
+---
+title: "Get data"
+output: html_document
+date: "2024-05-28"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We're gonna use Lukas Weber's hdcyto data package to get the Samusik dataset.
+
+```{r}
+library(tidyverse)
+library(HDCytoData)
+cells <- HDCytoData::Samusik_01_SE()
+```
+Ok, let's get it into ship shape.
+
+```{r}
+out <- cells@assays@data$exprs %>% as_tibble()
+```
+
+We transform the data and all of that. Luckily Lukas has the relevant marker info.
+
+```{r}
+rel_markers <- cells@colData %>% 
+  as_tibble() %>% 
+  dplyr::filter(marker_class == "type") %>% 
+  .[["marker_name"]]
+```
+
+```{r}
+out <- out[,names(out) %in% rel_markers]
+```
+
+And now we transform.
+
+```{r}
+out <- asinh(out/5) %>% as_tibble()
+```
+
+And we output.
+
+```{r}
+setwd(here::here("data", "cytof", "samusik"))
+saveRDS(out, "samusik_processed.rds")
+```
+

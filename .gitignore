@@ -1,0 +1,5 @@
+output/
+images/
+.venv/
+dimr_spectrum.Rproj
+dimr_spectrum.org
