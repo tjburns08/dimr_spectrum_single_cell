@@ -3,3 +3,5 @@ images/
 .venv/
 dimr_spectrum.Rproj
 dimr_spectrum.org
+.Rproj.user/
+.Rhistory
